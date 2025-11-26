@@ -71,6 +71,9 @@ nav a:hover::after {
     width: 100%;
 }
 
+nav.active { right: 0; }
+
+
 .right img {
     width: 30px;
     height: 30px;
@@ -806,17 +809,6 @@ input:focus, textarea:focus {
 }
 
 
-/* =========================
-   RESPONSIVE
-   ========================= */
-@media (max-width: 900px) {
-    .contact-wrapper {
-        flex-direction: column;
-        gap: 30px;
-    }
-}
-
-
 /* ========================================
    RESPONSIVE HEADER BURGER
    ======================================== */
@@ -845,25 +837,28 @@ input:focus, textarea:focus {
     }
 }
 
+/* ============================
+   FOOTER (version corrigée)
+============================ */
+
 .footer {
     background: #111;
     color: #ccc;
     padding: 60px 20px 30px;
     position: relative;
     overflow: hidden;
-    font-family: "Poppins", sans-serif;
 }
 
 .footer::before {
     content: "";
     position: absolute;
-    top: -50px;
-    right: -50px;
-    width: 200px;
-    height: 200px;
-    background: rgba(244,180,0,0.15);
+    top: -40px;
+    right: -40px;
+    width: 180px;
+    height: 180px;
+    background: rgba(244,180,0,0.12);
     border-radius: 50%;
-    filter: blur(100px);
+    filter: blur(90px);
     z-index: 0;
 }
 
@@ -878,7 +873,6 @@ input:focus, textarea:focus {
     z-index: 1;
 }
 
-/* Colonnes */
 .footer-column {
     flex: 1;
     min-width: 250px;
@@ -946,7 +940,7 @@ input:focus, textarea:focus {
     width: 100%;
 }
 
-/* Réseaux sociaux */
+/* Socials */
 .footer-socials {
     display: flex;
     gap: 15px;
@@ -962,7 +956,6 @@ input:focus, textarea:focus {
     border-radius: 50%;
     background-color: #222;
     color: #ccc;
-    font-size: 16px;
     transition: 0.3s ease;
 }
 
@@ -972,7 +965,7 @@ input:focus, textarea:focus {
     transform: translateY(-4px) scale(1.1);
 }
 
-/* Footer bas de page */
+/* Bas du footer */
 .footer-bottom {
     text-align: center;
     margin-top: 30px;
@@ -982,10 +975,59 @@ input:focus, textarea:focus {
     font-size: 0.9rem;
 }
 
-/* RESPONSIVE */
+/* ===============================
+   RESPONSIVE STEP 1 (<= 960px)
+================================ */
 @media (max-width: 960px) {
     .footer-container {
         flex-direction: column;
-        gap: 25px;
+        gap: 35px;
+    }
+}
+
+/* ===============================
+   RESPONSIVE STEP 2 (<= 520px)
+   => vrai mobile premium
+================================ */
+@media (max-width: 520px) {
+
+    .footer {
+        padding: 45px 15px 25px;
+    }
+
+    .footer::before {
+        width: 120px;
+        height: 120px;
+        filter: blur(70px);
+        top: -20px;
+        right: -20px;
+    }
+
+    .footer-title {
+        font-size: 1.1rem;
+    }
+
+    .footer-text {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .footer-links a {
+        font-size: 0.95rem;
+    }
+
+    .footer-socials {
+        justify-content: center;
+    }
+
+    .social-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 14px;
+    }
+
+    .footer-bottom {
+        font-size: 0.8rem;
+        margin-top: 20px;
     }
 }

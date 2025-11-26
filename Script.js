@@ -1,3 +1,21 @@
+document.addEventListener("DOMContentLoaded", function() {
+
+    const burger = document.querySelector(".burger-menu");
+    const nav = document.querySelector("nav");
+
+    if (!burger || !nav) {
+        console.error("Burger menu ou nav introuvable dans le DOM");
+        return;
+    }
+
+    burger.addEventListener("click", () => {
+        nav.classList.toggle("active");
+        burger.classList.toggle("active");
+    });
+
+});
+
+
 // Détecte les éléments quand ils entrent dans l'écran
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
