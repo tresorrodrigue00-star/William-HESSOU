@@ -15,6 +15,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 });
 
+nav.classList.toggle("active");
+
 
 // Détecte les éléments quand ils entrent dans l'écran
 const observer = new IntersectionObserver(entries => {

@@ -73,6 +73,23 @@ nav a:hover::after {
 
 nav.active { right: 0; }
 
+.burger-menu {
+    position: relative;
+    z-index: 200; /* plus haut que nav */
+}
+
+nav {
+    z-index: 150;
+}
+
+nav.active {
+    pointer-events: auto;
+}
+
+nav {
+    pointer-events: none;
+}
+
 
 .right img {
     width: 30px;
