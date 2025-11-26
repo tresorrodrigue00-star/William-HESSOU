@@ -948,3 +948,90 @@ input:focus, textarea:focus {
 
 }
 
+/* --- RESPONSIVITÉ GÉNÉRALE --- */
+
+/* NAVBAR */
+@media (max-width: 960px) {
+    header, .navbar {
+        padding: 15px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    nav a {
+        margin: 10px 0;
+    }
+}
+
+/* HERO */
+@media (max-width: 768px) {
+    .hero {
+        padding-top: 120px;
+    }
+    .main-title {
+        font-size: 50px;
+    }
+    .subtitle {
+        font-size: 24px;
+    }
+    .description {
+        font-size: 18px;
+    }
+    .buttons {
+        flex-direction: column;
+    }
+}
+
+/* STATS */
+@media (max-width: 768px) {
+    .stats {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+/* SERVICES */
+@media (max-width: 900px) {
+    .services-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+@media (max-width: 480px) {
+    .services-header h2 {
+        font-size: 2rem;
+    }
+    .services-header p {
+        font-size: 0.9rem;
+    }
+}
+
+/* TÉMOIGNAGES */
+@media (max-width: 768px) {
+    .temoignages-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    .temoignages-hero h1 {
+        font-size: 40px;
+    }
+    .temoignages-hero .subtitle {
+        font-size: 18px;
+    }
+}
+
+/* CONTACT */
+@media (max-width: 960px) {
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+    .contact-section h2 {
+        font-size: 36px;
+    }
+}
+
+/* FOOTER */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
