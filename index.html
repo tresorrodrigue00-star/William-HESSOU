@@ -10,6 +10,16 @@
 </head>
 <body>
 
+    <div class="page-loader">
+    <div class="loader-content">
+        <div class="loader-circle"></div>
+        <h2 class="loader-text">William HESSOU</h2>
+        <p class="loader-subtitle">Chargement en cours...</p>
+        <div class="loader-progress">
+            <div class="loader-progress-bar"></div>
+        </div>
+    </div>
+</div>
     <header>
         <div class="logo">William HESSOU</div>
         <nav>
@@ -19,11 +29,14 @@
             <a href="#Temoignage">Témoignage</a>
             <a href="#Contact">Contact</a>
         </nav>
-        <div class="right">
-            <a href="Connexion/Connexion.html.html" class="profile-icon">
-                <img src="Image/profil.png" alt="Profil">
-            </a>
-        </div>
+        <button class="theme-toggle" id="themeToggle" aria-label="Changer de thème">
+    <svg class="sun-icon" viewBox="0 0 24 24" width="20" height="20">
+        <path fill="currentColor" d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"/>
+    </svg>
+    <svg class="moon-icon" viewBox="0 0 24 24" width="20" height="20" style="display: none;">
+        <path fill="currentColor" d="M10 7a7 7 0 0 0 12 4.9v.1c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2h.1A6.977 6.977 0 0 0 10 7zm-6 5a8 8 0 0 0 15.062 3.762A9 9 0 0 1 8.238 4.938 7.999 7.999 0 0 0 4 12z"/>
+    </svg>
+</button>
         <button class="burger-menu" aria-label="Menu">
             <span></span>
             <span></span>
@@ -212,6 +225,154 @@
         </div>
     </section>
 
+    <section id="Réalisation" class="portfolio-section">
+    <div class="portfolio-header">
+        <h2>Mes Réalisations</h2>
+        <p>Découvrez quelques projets que j'ai réalisés avec passion et expertise</p>
+    </div>
+
+    <!-- Filtres -->
+    <div class="portfolio-filters">
+        <button class="filter-btn active" data-filter="all">Tous</button>
+        <button class="filter-btn" data-filter="web">Web</button>
+        <button class="filter-btn" data-filter="data">Data</button>
+        <button class="filter-btn" data-filter="maintenance">Maintenance</button>
+        <button class="filter-btn" data-filter="design">Design</button>
+    </div>
+
+    <!-- Galerie -->
+    <div class="portfolio-grid">
+        
+        <!-- Projet 1 - Web -->
+        <div class="portfolio-item" data-category="web">
+            <div class="portfolio-card">
+                <div class="portfolio-image">
+                    <img src="https://via.placeholder.com/400x300/1976d2/ffffff?text=Site+E-commerce" alt="Projet E-commerce">
+                    <div class="portfolio-overlay">
+                        <button class="portfolio-btn" onclick="openModal('modal1')">Voir détails</button>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <h3>Site E-commerce</h3>
+                    <p>Boutique en ligne moderne et responsive</p>
+                    <div class="portfolio-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projet 2 - Data -->
+        <div class="portfolio-item" data-category="data">
+            <div class="portfolio-card">
+                <div class="portfolio-image">
+                    <img src="https://via.placeholder.com/400x300/42a5f5/ffffff?text=Dashboard+Power+BI" alt="Dashboard Power BI">
+                    <div class="portfolio-overlay">
+                        <button class="portfolio-btn" onclick="openModal('modal2')">Voir détails</button>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <h3>Dashboard Power BI</h3>
+                    <p>Analyse de données commerciales en temps réel</p>
+                    <div class="portfolio-tags">
+                        <span>Power BI</span>
+                        <span>Excel</span>
+                        <span>Data Analysis</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projet 3 - Web -->
+        <div class="portfolio-item" data-category="web">
+            <div class="portfolio-card">
+                <div class="portfolio-image">
+                    <img src="https://via.placeholder.com/400x300/64b5f6/ffffff?text=Site+Vitrine" alt="Site Vitrine">
+                    <div class="portfolio-overlay">
+                        <button class="portfolio-btn" onclick="openModal('modal3')">Voir détails</button>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <h3>Site Vitrine Entreprise</h3>
+                    <p>Présence digitale professionnelle</p>
+                    <div class="portfolio-tags">
+                        <span>Responsive</span>
+                        <span>SEO</span>
+                        <span>Animation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projet 4 - Maintenance -->
+        <div class="portfolio-item" data-category="maintenance">
+            <div class="portfolio-card">
+                <div class="portfolio-image">
+                    <img src="https://via.placeholder.com/400x300/1e88e5/ffffff?text=Infrastructure+Réseau" alt="Infrastructure Réseau">
+                    <div class="portfolio-overlay">
+                        <button class="portfolio-btn" onclick="openModal('modal4')">Voir détails</button>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <h3>Infrastructure Réseau</h3>
+                    <p>Configuration complète pour PME</p>
+                    <div class="portfolio-tags">
+                        <span>Réseau</span>
+                        <span>Sécurité</span>
+                        <span>Config</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projet 5 - Design -->
+        <div class="portfolio-item" data-category="design">
+            <div class="portfolio-card">
+                <div class="portfolio-image">
+                    <img src="https://via.placeholder.com/400x300/0d47a1/ffffff?text=Identité+Visuelle" alt="Identité Visuelle">
+                    <div class="portfolio-overlay">
+                        <button class="portfolio-btn" onclick="openModal('modal5')">Voir détails</button>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <h3>Identité Visuelle</h3>
+                    <p>Logo et charte graphique complète</p>
+                    <div class="portfolio-tags">
+                        <span>Logo</span>
+                        <span>Branding</span>
+                        <span>Design</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projet 6 - Data -->
+        <div class="portfolio-item" data-category="data">
+            <div class="portfolio-card">
+                <div class="portfolio-image">
+                    <img src="https://via.placeholder.com/400x300/1565c0/ffffff?text=Automatisation+Excel" alt="Automatisation Excel">
+                    <div class="portfolio-overlay">
+                        <button class="portfolio-btn" onclick="openModal('modal6')">Voir détails</button>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <h3>Automatisation Excel</h3>
+                    <p>Macros et tableaux croisés dynamiques</p>
+                    <div class="portfolio-tags">
+                        <span>Excel</span>
+                        <span>VBA</span>
+                        <span>Automation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
     <section id="Temoignage" class="temoignages-hero">
         <h1>Ils nous ont fait <span>confiance</span></h1>
         <p class="subtitle">Découvrez ce que nos clients pensent de notre expertise</p>
@@ -362,6 +523,143 @@
         </div>
     </footer>
 
-    <script src="Script.js"></script>
+
+    <button id="backToTop" class="back-to-top" aria-label="Retour en haut">
+    <svg viewBox="0 0 24 24" width="24" height="24">
+        <path fill="currentColor" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
+    </svg>
+</button>
+
+<!-- MODALS POUR LES DÉTAILS (ajoute avant </body>) -->
+<div id="modal1" class="portfolio-modal">
+    <div class="modal-content">
+        <span class="modal-close" onclick="closeModal('modal1')">&times;</span>
+        <h2>Site E-commerce</h2>
+        <img src="https://via.placeholder.com/600x400/1976d2/ffffff?text=Site+E-commerce" alt="Projet">
+        <p>Description détaillée du projet : Création d'une boutique en ligne complète avec système de paiement, gestion des stocks, et interface d'administration.</p>
+        <div class="modal-features">
+            <h3>Fonctionnalités :</h3>
+            <ul>
+                <li>Catalogue produits dynamique</li>
+                <li>Panier et checkout sécurisé</li>
+                <li>Panel administrateur</li>
+                <li>Responsive design</li>
+            </ul>
+        </div>
+        <a href="#" class="modal-btn">Voir le site</a>
+    </div>
+</div>
+
+<div id="modal2" class="portfolio-modal">
+    <div class="modal-content">
+        <span class="modal-close" onclick="closeModal('modal2')">&times;</span>
+        <h2>Dashboard Power Bi</h2>
+        <img src="https://via.placeholder.com/600x400/1976d2/ffffff?text=Site+E-commerce" alt="Projet">
+        <p>Description détaillée du projet : Création d'une boutique en ligne complète avec système de paiement, gestion des stocks, et interface d'administration.</p>
+        <div class="modal-features">
+            <h3>Fonctionnalités :</h3>
+            <ul>
+                <li>Catalogue produits dynamique</li>
+                <li>Panier et checkout sécurisé</li>
+                <li>Panel administrateur</li>
+                <li>Responsive design</li>
+            </ul>
+        </div>
+        <a href="#" class="modal-btn">Voir le site</a>
+    </div>
+</div>
+
+<div id="modal3" class="portfolio-modal">
+    <div class="modal-content">
+        <span class="modal-close" onclick="closeModal('modal3')">&times;</span>
+        <h2>Site Vitrine Entreprise</h2>
+        <img src="https://via.placeholder.com/600x400/1976d2/ffffff?text=Site+E-commerce" alt="Projet">
+        <p>Description détaillée du projet : Création d'une boutique en ligne complète avec système de paiement, gestion des stocks, et interface d'administration.</p>
+        <div class="modal-features">
+            <h3>Fonctionnalités :</h3>
+            <ul>
+                <li>Catalogue produits dynamique</li>
+                <li>Panier et checkout sécurisé</li>
+                <li>Panel administrateur</li>
+                <li>Responsive design</li>
+            </ul>
+        </div>
+        <a href="#" class="modal-btn">Voir le site</a>
+    </div>
+</div><div id="modal3" class="portfolio-modal">
+    <div class="modal-content">
+        <span class="modal-close" onclick="closeModal('modal3')">&times;</span>
+        <h2>Site Vitrine Entreprise</h2>
+        <img src="https://via.placeholder.com/600x400/1976d2/ffffff?text=Site+E-commerce" alt="Projet">
+        <p>Description détaillée du projet : Création d'une boutique en ligne complète avec système de paiement, gestion des stocks, et interface d'administration.</p>
+        <div class="modal-features">
+            <h3>Fonctionnalités :</h3>
+            <ul>
+                <li>Catalogue produits dynamique</li>
+                <li>Panier et checkout sécurisé</li>
+                <li>Panel administrateur</li>
+                <li>Responsive design</li>
+            </ul>
+        </div>
+        <a href="#" class="modal-btn">Voir le site</a>
+    </div>
+</div>
+
+<div id="modal4" class="portfolio-modal">
+    <div class="modal-content">
+        <span class="modal-close" onclick="closeModal('modal4')">&times;</span>
+        <h2>Infrastructure Réseau</h2>
+        <img src="https://via.placeholder.com/600x400/1976d2/ffffff?text=Site+E-commerce" alt="Projet">
+        <p>Description détaillée du projet : Création d'une boutique en ligne complète avec système de paiement, gestion des stocks, et interface d'administration.</p>
+        <div class="modal-features">
+            <h3>Fonctionnalités :</h3>
+            <ul>
+                <li>Catalogue produits dynamique</li>
+                <li>Panier et checkout sécurisé</li>
+                <li>Panel administrateur</li>
+                <li>Responsive design</li>
+            </ul>
+        </div>
+        <a href="#" class="modal-btn">Voir le site</a>
+    </div>
+</div>
+
+<div id="modal5" class="portfolio-modal">
+    <div class="modal-content">
+        <span class="modal-close" onclick="closeModal('modal5')">&times;</span>
+        <h2>Identité Visuelle</h2>
+        <img src="https://via.placeholder.com/600x400/1976d2/ffffff?text=Site+E-commerce" alt="Projet">
+        <p>Description détaillée du projet : Création d'une boutique en ligne complète avec système de paiement, gestion des stocks, et interface d'administration.</p>
+        <div class="modal-features">
+            <h3>Fonctionnalités :</h3>
+            <ul>
+                <li>Catalogue produits dynamique</li>
+                <li>Panier et checkout sécurisé</li>
+                <li>Panel administrateur</li>
+                <li>Responsive design</li>
+            </ul>
+        </div>
+        <a href="#" class="modal-btn">Voir le site</a>
+    </div>
+</div>
+<div id="modal6" class="portfolio-modal">
+    <div class="modal-content">
+        <span class="modal-close" onclick="closeModal('modal6')">&times;</span>
+        <h2>Automatisation Excel</h2>
+        <img src="https://via.placeholder.com/600x400/1976d2/ffffff?text=Site+E-commerce" alt="Projet">
+        <p>Description détaillée du projet : Création d'une boutique en ligne complète avec système de paiement, gestion des stocks, et interface d'administration.</p>
+        <div class="modal-features">
+            <h3>Fonctionnalités :</h3>
+            <ul>
+                <li>Catalogue produits dynamique</li>
+                <li>Panier et checkout sécurisé</li>
+                <li>Panel administrateur</li>
+                <li>Responsive design</li>
+            </ul>
+        </div>
+        <a href="#" class="modal-btn">Voir le site</a>
+    </div>
+</div>
+  <script src="Script.js"></script>
 </body>
 </html>
