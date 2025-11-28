@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>William HESSOU</title>
-    <link rel="stylesheet" href="monstyle.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Solway:wght@300;400;500;700;800&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="monstyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+NZ:wght@100..400&display=swap" rel="stylesheet">    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- NAVIGATION -->
     <header>
         <div class="logo">William HESSOU</div>
         <nav>
@@ -25,7 +24,6 @@
                 <img src="Image/profil.png" alt="Profil">
             </a>
         </div>
-        <!-- Menu burger pour mobile -->
         <button class="burger-menu" aria-label="Menu">
             <span></span>
             <span></span>
@@ -33,16 +31,15 @@
         </button>
     </header>
 
-    <!-- HERO SECTION -->
     <section class="hero" id="Accueil">
         <div class="photo-container">
-            <img src="Image/WhatsApp Image 2025-11-21 à 21.11.31_49c1051a.jpg" alt="Photo artiste">
+            <img src="Image/WhatsApp Image 2025-11-21 à 21.11.31_49c1051a.jpg" alt="Photo William">
         </div>
 
-        <h1 class="main-title typing-text">William HESSOU</h1>
+        <h1 class="main-title">William HESSOU</h1>
         <h2 class="subtitle">De la Technique au Digital : Une Expertise Polyvalente au Service de Vos Projets</h2>
 
-        <p class="description typing-text">
+        <p class="description">
             Ingénieur Maintenance • Développeur Web • Réseaux • Formateur Excel & Power BI • Data Analyst
         </p>
 
@@ -57,27 +54,26 @@
             <a href="#Contact" class="btn">✉️ Me Contacter</a>
         </div>
 
-        <div class="stats fade-element">
+        <div class="stats">
             <div class="stat">
-                <h3 class="count" data-target="50">50</h3>
+                <h3 class="count" >+50</h3>
                 <p>Projets Techniques</p>
             </div>
             <div class="stat">
-                <h3 class="count" data-target="30">30</h3>
+                <h3 class="count">+30</h3>
                 <p>Solutions Créées</p>
             </div>
             <div class="stat">
-                <h3 class="count" data-target="80">80</h3>
+                <h3 class="count">+80h</h3>
                 <p>Heures de Formation</p>
             </div>
             <div class="stat">
-                <h3 class="count" data-target="100">100</h3>
+                <h3 class="count">+100</h3>
                 <p>Clients Satisfaits</p>
             </div>
         </div>
     </section>
 
-    <!-- Réseaux sociaux -->
     <section class="socials-row" aria-label="Réseaux sociaux">
         <div class="socials-container">
             <a class="social-btn" href="https://wa.me/2290195115089" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
@@ -98,8 +94,7 @@
         </div>
     </section>
 
-    <!-- À PROPOS -->
-    <section id="A propos" class="apropos-hero fade-element">
+    <section id="A propos" class="apropos-hero">
         <h1><span>À Propos</span> de William HESSOU</h1>
         <p class="subtitle">Un ingénieur polyvalent qui fusionne technique, digital et analyse pour créer des solutions à forte valeur ajoutée.</p>
     </section>
@@ -143,8 +138,7 @@
         <p>Mon objectif est clair : transformer vos besoins techniques en solutions concrètes, stables et performantes — afin que vous puissiez vous concentrer sur ce qui compte vraiment : développer votre activité en toute confiance.</p>
     </section>
 
-    <!-- SERVICES -->
-    <section id="Services" class="services-section fade-element">
+    <section id="Services" class="services-section">
         <div class="services-header">
             <h2>Mes Services</h2>
             <p>Des solutions modernes, fiables et adaptées à vos besoins numériques.</p>
@@ -218,8 +212,7 @@
         </div>
     </section>
 
-    <!-- TÉMOIGNAGES -->
-    <section id="Temoignage" class="temoignages-hero fade-element">
+    <section id="Temoignage" class="temoignages-hero">
         <h1>Ils nous ont fait <span>confiance</span></h1>
         <p class="subtitle">Découvrez ce que nos clients pensent de notre expertise</p>
     </section>
@@ -271,8 +264,7 @@
         </div>
     </section>
 
-    <!-- CONTACT -->
-    <section id="Contact" class="contact-section fade-element">
+    <section id="Contact" class="contact-section">
         <h2>Contact</h2>
 
         <div class="contact-wrapper">
@@ -302,27 +294,27 @@
                 <a href="https://wa.me/2290195115089" class="contact-btn">Me contacter directement sur WhatsApp</a>
             </div>
 
-            <form class="contact-form" action="https://formspree.io/f/xjkqbjvd" method="POST">
+            <form class="contact-form" id="contact-form" action="https://formspree.io/f/xjkqbjvd" method="POST">
                 <h3>Envoyer un Message</h3>
 
-                <div class="form-group" >
+                <div class="form-group">
                     <label>Nom complet</label>
-                    <input type="text" placeholder="Votre nom...">
+                    <input type="text" name="nom" placeholder="Votre nom..." required>
                 </div>
 
                 <div class="form-group">
                     <label>Adresse email</label>
-                    <input type="email" placeholder="exemple@gmail.com">
+                    <input type="email" name="email" placeholder="exemple@gmail.com" required>
                 </div>
 
                 <div class="form-group">
                     <label>Objet</label>
-                    <input type="text" placeholder="Sujet du message...">
+                    <input type="text" name="objet" placeholder="Sujet du message..." required>
                 </div>
 
                 <div class="form-group">
                     <label>Message</label>
-                    <textarea placeholder="Votre message..." rows="5"></textarea>
+                    <textarea name="message" placeholder="Votre message..." rows="5" required></textarea>
                 </div>
 
                 <button type="submit" class="submit-btn">Envoyer</button>
@@ -330,7 +322,6 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-column">
@@ -353,13 +344,13 @@
             <div class="footer-column">
                 <h3 class="footer-title">Suivez-moi</h3>
                 <div class="footer-socials">
-                    <a href="https://www.linkedin.com/in/william-hessou-b797012a2/" class="social-icon">
+                    <a href="https://www.linkedin.com/in/william-hessou-b797012a2/" class="social-icon" target="_blank" rel="noopener noreferrer">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
-                    <a href="https://www.facebook.com/profile.php?id=100074727445456" class="social-icon">
+                    <a href="https://www.facebook.com/profile.php?id=100074727445456" class="social-icon" target="_blank" rel="noopener noreferrer">
                         <i class="fab fa-facebook-f"></i>
                     </a>
-                    <a href="https://wa.me/2290195115089" class="social-icon">
+                    <a href="https://wa.me/2290195115089" class="social-icon" target="_blank" rel="noopener noreferrer">
                         <i class="fab fa-whatsapp"></i>
                     </a>
                 </div>
