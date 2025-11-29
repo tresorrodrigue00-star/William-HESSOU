@@ -2855,21 +2855,3 @@ h1, h2, h3, h4, h5, h6, p {
         max-width: 100%;
     }
 }
-
-/* SCROLL BAR PLUS DISCRÈTE */
-::-webkit-scrollbar {
-    width: 8px;
-}
-
-::-webkit-scrollbar-track {
-    background: #0a0e27;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #42a5f5;
-    border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #64b5f6;
-}
