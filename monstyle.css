@@ -2173,3 +2173,703 @@ body.light-mode .particle {
         opacity: 1;
     }
 }
+
+
+
+
+
+
+
+
+
+
+/* ========================================
+   CORRECTIFS RESPONSIVITÉ MOBILE - À AJOUTER À LA FIN DU CSS
+   ======================================== */
+
+/* Empêcher le scroll horizontal sur TOUT le site */
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+/* HEADER - Optimisation mobile */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 20px;
+    }
+    
+    .logo {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 12px 15px;
+    }
+}
+
+/* HERO SECTION - Mobile fix */
+@media (max-width: 768px) {
+    .hero {
+        padding: 120px 15px 50px;
+    }
+    
+    .photo-container {
+        width: 140px;
+        height: 140px;
+    }
+    
+    .main-title {
+        font-size: 32px;
+        letter-spacing: 1px;
+    }
+    
+    .subtitle {
+        font-size: 20px;
+    }
+    
+    .description {
+        font-size: 16px;
+        padding: 0 10px;
+    }
+    
+    .small-text {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+    
+    .buttons {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 0 15px;
+    }
+    
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* STATS - Responsive fix */
+@media (max-width: 768px) {
+    .stats {
+        gap: 25px;
+        padding: 0 15px;
+    }
+    
+    .stat {
+        min-width: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .stats {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .stat {
+        width: 100%;
+        max-width: 200px;
+    }
+}
+
+/* SOCIALS ROW - Mobile optimization */
+@media (max-width: 768px) {
+    .socials-row {
+        padding: 30px 15px;
+    }
+    
+    .socials-container {
+        gap: 15px;
+    }
+    
+    .social-btn {
+        width: 56px;
+        height: 56px;
+    }
+    
+    .social-btn .icon {
+        width: 26px;
+        height: 26px;
+    }
+}
+
+/* À PROPOS HERO - Mobile fix */
+@media (max-width: 768px) {
+    .apropos-hero {
+        padding: 130px 20px 80px;
+    }
+    
+    .apropos-hero h1 {
+        font-size: 42px;
+    }
+    
+    .apropos-hero .subtitle {
+        font-size: 18px;
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .apropos-hero {
+        padding: 120px 15px 60px;
+    }
+    
+    .apropos-hero h1 {
+        font-size: 32px;
+    }
+    
+    .apropos-hero .subtitle {
+        font-size: 16px;
+    }
+}
+
+/* À PROPOS SECTION - Mobile fix */
+@media (max-width: 768px) {
+    .apropos-section {
+        padding: 60px 6%;
+    }
+    
+    .apropos-section h2 {
+        font-size: 26px;
+    }
+    
+    .apropos-section p {
+        font-size: 16px;
+        padding: 10px 15px;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .apropos-section {
+        padding: 50px 5%;
+    }
+    
+    .apropos-section h2 {
+        font-size: 22px;
+    }
+    
+    .apropos-section p {
+        font-size: 15px;
+        padding: 8px 12px;
+    }
+}
+
+/* SERVICES SECTION - Mobile optimization */
+@media (max-width: 768px) {
+    .services-section {
+        padding: 70px 15px;
+    }
+    
+    .services-header h2 {
+        font-size: 2rem;
+    }
+    
+    .services-header p {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 0 5px;
+    }
+    
+    .service-card {
+        padding: 25px 20px;
+    }
+    
+    .service-card h3 {
+        font-size: 1.3rem;
+    }
+    
+    .service-card ul li {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .services-section {
+        padding: 60px 10px;
+    }
+    
+    .services-header h2 {
+        font-size: 1.6rem;
+    }
+    
+    .service-card {
+        padding: 20px 15px;
+    }
+}
+
+/* TÉMOIGNAGES - Mobile fix */
+@media (max-width: 768px) {
+    .temoignages-hero {
+        padding: 120px 20px 60px;
+    }
+    
+    .temoignages-hero h1 {
+        font-size: 40px;
+    }
+    
+    .temoignages-hero .subtitle {
+        font-size: 18px;
+        padding: 0 10px;
+    }
+    
+    .temoignages-section {
+        padding: 50px 6%;
+    }
+    
+    .temoignages-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .card {
+        padding: 25px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .temoignages-hero h1 {
+        font-size: 30px;
+    }
+    
+    .temoignages-hero .subtitle {
+        font-size: 16px;
+    }
+    
+    .temoignages-section {
+        padding: 40px 5%;
+    }
+    
+    .card {
+        padding: 20px 15px;
+    }
+    
+    .avis {
+        font-size: 16px;
+    }
+}
+
+/* CONTACT SECTION - Mobile optimization */
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 80px 5%;
+    }
+    
+    .contact-section h2 {
+        font-size: 32px;
+        margin-bottom: 35px;
+    }
+    
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .contact-info, .contact-form {
+        padding: 25px 20px;
+    }
+    
+    .contact-info h3,
+    .contact-form h3 {
+        font-size: 22px;
+    }
+    
+    .info-item .icon {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-section {
+        padding: 60px 4%;
+    }
+    
+    .contact-section h2 {
+        font-size: 24px;
+        letter-spacing: 1px;
+    }
+    
+    .contact-info, .contact-form {
+        padding: 20px 15px;
+        border-radius: 15px;
+    }
+    
+    .contact-info h3,
+    .contact-form h3 {
+        font-size: 20px;
+    }
+    
+    .contact-info p {
+        font-size: 15px;
+    }
+    
+    input, textarea {
+        padding: 12px;
+        font-size: 14px;
+    }
+    
+    .contact-btn, .submit-btn {
+        padding: 12px 18px;
+        font-size: 15px;
+    }
+}
+
+/* PORTFOLIO SECTION - Mobile fix */
+@media (max-width: 768px) {
+    .portfolio-section {
+        padding: 70px 4%;
+    }
+    
+    .portfolio-header h2 {
+        font-size: 2rem;
+    }
+    
+    .portfolio-header p {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+    
+    .portfolio-filters {
+        gap: 10px;
+        padding: 0 10px;
+    }
+    
+    .filter-btn {
+        padding: 8px 18px;
+        font-size: 14px;
+    }
+    
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 0 5px;
+    }
+    
+    .portfolio-info {
+        padding: 20px;
+    }
+    
+    .portfolio-info h3 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio-section {
+        padding: 60px 3%;
+    }
+    
+    .portfolio-header h2 {
+        font-size: 1.6rem;
+    }
+    
+    .portfolio-filters {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .filter-btn {
+        width: 100%;
+    }
+    
+    .portfolio-info {
+        padding: 15px;
+    }
+    
+    .portfolio-info h3 {
+        font-size: 1.2rem;
+    }
+    
+    .portfolio-info p {
+        font-size: 14px;
+    }
+}
+
+/* MODAL - Mobile optimization */
+@media (max-width: 768px) {
+    .modal-content {
+        padding: 30px 20px;
+        margin: 15px;
+        max-width: 95%;
+    }
+    
+    .modal-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .modal-content p {
+        font-size: 15px;
+    }
+    
+    .modal-close {
+        font-size: 28px;
+        top: 10px;
+        right: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-content {
+        padding: 25px 15px;
+        margin: 10px;
+    }
+    
+    .modal-content h2 {
+        font-size: 1.3rem;
+    }
+    
+    .modal-features h3 {
+        font-size: 1.1rem;
+    }
+    
+    .modal-btn {
+        width: 100%;
+        text-align: center;
+        padding: 12px 20px;
+    }
+}
+
+/* FOOTER - Mobile corrections */
+@media (max-width: 768px) {
+    .footer {
+        padding: 50px 20px 25px;
+    }
+    
+    .footer-container {
+        gap: 30px;
+    }
+    
+    .footer-column {
+        min-width: 100%;
+    }
+    
+    .footer-title {
+        font-size: 1.2rem;
+    }
+    
+    .footer-text {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 520px) {
+    .footer {
+        padding: 40px 15px 20px;
+    }
+    
+    .footer-title {
+        font-size: 1.1rem;
+    }
+    
+    .footer-text,
+    .footer-links a {
+        font-size: 0.9rem;
+    }
+    
+    .footer-socials {
+        justify-content: flex-start;
+    }
+    
+    .footer-bottom {
+        font-size: 0.75rem;
+        padding: 0 10px;
+    }
+}
+
+/* WHATSAPP BUTTON - Mobile fix */
+@media (max-width: 768px) {
+    .whatsapp-float {
+        bottom: 90px;
+        right: 15px;
+    }
+    
+    .whatsapp-button {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .whatsapp-icon {
+        width: 26px;
+        height: 26px;
+    }
+}
+
+@media (max-width: 480px) {
+    .whatsapp-float {
+        bottom: 80px;
+        right: 12px;
+    }
+    
+    .whatsapp-button {
+        width: 48px;
+        height: 48px;
+    }
+    
+    .whatsapp-icon {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+/* BACK TO TOP - Mobile fix */
+@media (max-width: 768px) {
+    .back-to-top {
+        bottom: 25px;
+        right: 15px;
+        width: 45px;
+        height: 45px;
+    }
+}
+
+@media (max-width: 480px) {
+    .back-to-top {
+        bottom: 20px;
+        right: 12px;
+        width: 42px;
+        height: 42px;
+    }
+}
+
+/* LOADER - Mobile optimization */
+@media (max-width: 768px) {
+    .loader-circle {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .loader-circle::before {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .loader-text {
+        font-size: 24px;
+    }
+    
+    .loader-subtitle {
+        font-size: 14px;
+        padding: 0 20px;
+    }
+    
+    .loader-progress {
+        width: 220px;
+    }
+}
+
+@media (max-width: 480px) {
+    .loader-circle {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .loader-circle::before {
+        width: 55px;
+        height: 55px;
+    }
+    
+    .loader-text {
+        font-size: 20px;
+    }
+    
+    .loader-progress {
+        width: 180px;
+    }
+}
+
+/* NAVIGATION BURGER - Amélioration */
+@media (max-width: 900px) {
+    nav {
+        width: 70%;
+        max-width: 280px;
+    }
+    
+    nav a {
+        font-size: 18px;
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        width: 80%;
+        max-width: 250px;
+    }
+    
+    nav a {
+        font-size: 16px;
+    }
+}
+
+/* CORRECTIONS GLOBALES IMAGES */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* CORRECTIONS TEXTES QUI DÉBORDENT */
+h1, h2, h3, h4, h5, h6, p {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+/* ÉVITER LE DÉBORDEMENT DES CONTAINERS */
+.hero, 
+.apropos-section, 
+.services-section, 
+.temoignages-section, 
+.contact-section, 
+.portfolio-section,
+.footer {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+/* PADDING LATÉRAL MINIMUM SUR MOBILE */
+@media (max-width: 480px) {
+    section,
+    .section {
+        padding-left: max(15px, 3vw);
+        padding-right: max(15px, 3vw);
+    }
+}
+
+/* CORRECTIF POUR LES GRILLES */
+@media (max-width: 480px) {
+    .services-grid,
+    .temoignages-grid,
+    .portfolio-grid {
+        grid-template-columns: 1fr !important;
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/* SCROLL BAR PLUS DISCRÈTE */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0a0e27;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #42a5f5;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #64b5f6;
+}
